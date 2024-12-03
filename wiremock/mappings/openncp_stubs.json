@@ -1,0 +1,30 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/fhir/Patient?identifier=e2ac00ae-651c-4fcc-8240-7223a33523d8"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "responses/openehr_query.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/rest/openehr/v1/query/aql"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "responses/openehr_query.json"
+      }
+    }
+  ]
+}

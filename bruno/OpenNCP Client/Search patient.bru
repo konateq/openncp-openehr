@@ -1,0 +1,20 @@
+meta {
+  name: Search patient
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{openncp-client_base-url}}/fhir/Patient?identifier
+  body: none
+  auth: none
+}
+
+params:query {
+  identifier: e2ac00ae-651c-4fcc-8240-7223a33523d8
+}
+
+headers {
+  CountryCode: DE
+  Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.7jgWclV63OQC_R_hxa4yYznStm7lIY_BdQkA0n-qjObomW6t5GDcGW0olYo5sv3tkcjjZ_HMQ-KR7UVW0g2STQ
+}

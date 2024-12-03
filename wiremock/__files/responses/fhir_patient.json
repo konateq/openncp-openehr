@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "305f43fb-cfdd-4fe0-8af6-0ef15b05a9ae",
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.36.146.595.217.0.1",
+      "value": "e2ac00ae-651c-4fcc-8240-7223a33523d8"
+    },
+    {
+      "system": "urn:org:openehr::ehr_id",
+      "value": "81433066-c417-4813-9b29-79783e7bed23"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "Doe",
+      "given": [
+        "John"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1974-12-25"
+}

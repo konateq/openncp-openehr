@@ -1,0 +1,27 @@
+meta {
+  name: Execute ad-hoc AQL
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{openncp-client_base-url}}/openehr/v1/query/aql
+  body: json
+  auth: none
+}
+
+headers {
+  CountryCode: DE
+}
+
+body:json {
+  {
+    "q": "SELECT e/ehr_id/value, c/context/start_time/value as startTime, obs/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/magnitude AS systolic, c/uid/value AS cid, c/name FROM EHR e CONTAINS COMPOSITION c[openEHR-EHR-COMPOSITION.encounter.v1] CONTAINS OBSERVATION obs[openEHR-EHR-OBSERVATION.blood_pressure.v1] WHERE obs/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/magnitude >= $systolic_bp",
+    "offset": 10,
+    "fetch": 10,
+    "query_parameters": {
+      "ehr_id": "7d44b88c-4199-4bad-97dc-d78268e01398",
+      "systolic_bp": 140
+    }
+  }
+}
