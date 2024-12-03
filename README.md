@@ -72,7 +72,7 @@ VALUES ('DE.openEHRQueryService.WSE', 'https://openncp-server:8443/openncp-ws-se
 > Replace `<iso2_country_code>` with the ISO 3166-1 alpha-2 country code of the country and `<tomcat_node_a_base_url>`
 > with the base URL of the `tomcat_node_a` service.
 
-For local testing, start WireMock using the `compose.yml` file in this repository:
+For local testing, start WireMock using the `compose.yml` file located in this repository:
 
 ```shell
 docker compose up
@@ -80,7 +80,7 @@ docker compose up
 
 Start Bruno and import the collection located in the `bruno` directory. 
 
-
-
 > [!IMPORTANT]
-> The FHIR request is not working yet due to the missing SAML assertion.
+> The `Search patient` request using FHIR does not work due to the missing SAML assertion.
+
+![Bruno screenshot](./img/bruno.png)
